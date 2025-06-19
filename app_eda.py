@@ -277,7 +277,7 @@ class EDA:
             fig, ax = plt.subplots(figsize=(12, 6))
             pivot_area.plot.area(ax=ax, colormap='tab20')
             ax.set_title("지역별 인구 누적 영역")
-            ax.set_xlabel("연도")
+            ax.set_xlabel("Year")
             ax.set_ylabel("인구 수")
             st.pyplot(fig)
 
