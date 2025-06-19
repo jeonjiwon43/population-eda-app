@@ -234,9 +234,9 @@ class EDA:
 
             fig, ax = plt.subplots()
             ax.plot(nationwide['연도'], nationwide['인구'], marker='o', color='tab:blue')
-            ax.set_title("전국 총인구 추이")
-            ax.set_xlabel("연도")
-            ax.set_ylabel("인구 수")
+            ax.set_title("National total population trend")
+            ax.set_xlabel("Year")
+            ax.set_ylabel("Population")
             st.pyplot(fig)
 
         with tabs[2]:
@@ -253,9 +253,9 @@ class EDA:
 
             fig, ax = plt.subplots(figsize=(8, 6))
             sns.barplot(x='변화량', y=pivot.index, data=pivot, ax=ax, palette='coolwarm')
-            ax.set_title(f"{prev_year}~{recent_year} 인구 변화량")
-            ax.set_xlabel("변화량 (명)")
-            ax.set_ylabel("지역")
+            ax.set_title(f"{prev_year}~{recent_year} Population change")
+            ax.set_xlabel("Amount of change (person)")
+            ax.set_ylabel("Region")
             st.pyplot(fig)
 
         with tabs[3]:
@@ -276,9 +276,9 @@ class EDA:
 
             fig, ax = plt.subplots(figsize=(12, 6))
             pivot_area.plot.area(ax=ax, colormap='tab20')
-            ax.set_title("지역별 인구 누적 영역")
+            ax.set_title("Cumulative population area by region")
             ax.set_xlabel("Year")
-            ax.set_ylabel("인구 수")
+            ax.set_ylabel("Population")
             st.pyplot(fig)
 
             st.markdown("> 지역별 인구 비중의 흐름을 누적 시각화한 그래프입니다.")
