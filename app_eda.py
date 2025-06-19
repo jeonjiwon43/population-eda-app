@@ -205,7 +205,7 @@ class EDA:
         st.title("📊 Population Trends EDA")
         uploaded = st.file_uploader("Upload population_trends.csv", type="csv")
         if not uploaded:
-            st.info("Please upload the population_trends.csv file.")
+            st.info("population_trends.csv 파일을 업로드 해주세요.")
             return
 
         df = pd.read_csv(uploaded)
